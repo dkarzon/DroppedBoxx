@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroppedBoxx", "DroppedBoxx\DroppedBoxx.csproj", "{0BF854D2-7437-4D5F-BC86-53ABD755F186}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "DroppedboxxInstaller", "DroppedboxxInstaller\DroppedboxxInstaller.vddproj", "{75D77FC8-5231-40C3-AA44-1913FBC71A2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluid", "Fluid\Fluid.csproj", "{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BF854D2-7437-4D5F-BC86-53ABD755F186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF854D2-7437-4D5F-BC86-53ABD755F186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF854D2-7437-4D5F-BC86-53ABD755F186}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0BF854D2-7437-4D5F-BC86-53ABD755F186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF854D2-7437-4D5F-BC86-53ABD755F186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF854D2-7437-4D5F-BC86-53ABD755F186}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{75D77FC8-5231-40C3-AA44-1913FBC71A2E}.Debug|Any CPU.ActiveCfg = Debug
+		{75D77FC8-5231-40C3-AA44-1913FBC71A2E}.Release|Any CPU.ActiveCfg = Release
+		{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

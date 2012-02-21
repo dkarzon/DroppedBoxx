@@ -1,0 +1,236 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BF854D2-7437-4D5F-BC86-53ABD755F186}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DroppedBoxx</RootNamespace>
+    <AssemblyName>DroppedBoxx</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <DeployDirSuffix>DroppedBoxx</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>Dropbox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF, Version=2.3.0.39, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonPanel.cs">
+    </Compile>
+    <Compile Include="Code\Exceptions\DropException.cs" />
+    <Compile Include="Helpers\FileHelpers.cs" />
+    <Compile Include="Code\JsonDeserializer.cs" />
+    <Compile Include="Code\MiscExtensions.cs" />
+    <Compile Include="Code\OAuthBase.cs" />
+    <Compile Include="Code\Responses\AccountInfo.cs" />
+    <Compile Include="Code\Responses\MetaData.cs" />
+    <Compile Include="Code\Responses\UserLogin.cs" />
+    <Compile Include="Code\Uploader.cs" />
+    <Compile Include="Data\JsonStorageProvider.cs" />
+    <Compile Include="Enums\SyncResultEnum.cs" />
+    <Compile Include="Helpers\ListHelpers.cs" />
+    <Compile Include="SettingsPanel.cs" />
+    <Compile Include="SyncPanel.cs" />
+    <Compile Include="Sync\SyncThread.cs" />
+    <Compile Include="Sync\Syncer.cs" />
+    <Compile Include="TextInputPanel.cs" />
+    <Compile Include="InfoPanel.cs">
+    </Compile>
+    <Compile Include="DropOptionButtonPanel.cs">
+    </Compile>
+    <Compile Include="FileSystemPanel.cs">
+    </Compile>
+    <Compile Include="FileOptionButtonPanel.cs">
+    </Compile>
+    <Compile Include="DropFolderPanel.cs">
+    </Compile>
+    <Compile Include="ListBoxes\FileSystemListBox.cs">
+    </Compile>
+    <Compile Include="ListBoxes\DropItemsListBox.cs">
+    </Compile>
+    <Compile Include="Models\DropboxFile.cs" />
+    <Compile Include="Code\Settings.cs" />
+    <Compile Include="Code\DropBox.cs" />
+    <Compile Include="AddFolderPanel.cs">
+    </Compile>
+    <Compile Include="FoldersPanel.cs">
+    </Compile>
+    <Compile Include="ListBoxes\AddFolderListBox.cs">
+    </Compile>
+    <Compile Include="ListBoxes\ItemsListBox.cs">
+    </Compile>
+    <Compile Include="ListBoxes\ListBoxBase.cs">
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPanel.cs">
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Templates\AddFolderTemplate.cs">
+    </Compile>
+    <Compile Include="Templates\FileSystemTemplate.cs">
+    </Compile>
+    <Compile Include="Templates\DropItemTemplate.cs">
+    </Compile>
+    <Compile Include="Templates\ItemTemplate.cs">
+    </Compile>
+    <Compile Include="Themes\BlackWhiteTheme.cs" />
+    <Compile Include="Themes\TestTheme.cs" />
+    <Compile Include="Themes\DropboxTheme.cs" />
+    <Compile Include="Themes\DefaultTheme.cs" />
+    <Compile Include="Themes\Theme.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="Web\enum.cs" />
+    <Compile Include="Web\Http.cs" />
+    <Compile Include="Web\HttpFile.cs" />
+    <Compile Include="Web\HttpHeader.cs" />
+    <Compile Include="Web\HttpParameter.cs" />
+    <Compile Include="Web\HttpResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dropbox.ico" />
+    <Content Include="Resources\accept.png" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\application_lightning.png" />
+    <Content Include="Resources\application_side_contract.png" />
+    <Content Include="Resources\application_xp.png" />
+    <Content Include="Resources\arrow_refresh.png" />
+    <Content Include="Resources\arrow_rotate_anticlockwise.png" />
+    <Content Include="Resources\Background.png" />
+    <Content Include="Resources\bin.png" />
+    <Content Include="Resources\brick_add.png" />
+    <Content Include="Resources\brick_go.png" />
+    <Content Include="Resources\brick_link.png" />
+    <Content Include="Resources\camera.png" />
+    <Content Include="Resources\Cog.png" />
+    <Content Include="Resources\cross.png" />
+    <Content Include="Resources\cut.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\disk.png" />
+    <Content Include="Resources\door_in.png" />
+    <Content Include="Resources\email_attach.png" />
+    <Content Include="Resources\Folder.png" />
+    <Content Include="Resources\folder_add.png" />
+    <Content Include="Resources\folder_brick.png" />
+    <Content Include="Resources\folder_delete.png" />
+    <Content Include="Resources\Folder_sync.png" />
+    <Content Include="Resources\information.png" />
+    <Content Include="Resources\keyboard.png" />
+    <Content Include="Resources\music.png" />
+    <Content Include="Resources\note.png" />
+    <Content Include="Resources\page_copy.png" />
+    <Content Include="Resources\page_paste.png" />
+    <Content Include="Resources\page_white.png" />
+    <Content Include="Resources\page_white_acrobat.png" />
+    <Content Include="Resources\page_white_c.png" />
+    <Content Include="Resources\page_white_code.png" />
+    <Content Include="Resources\page_white_cplusplus.png" />
+    <Content Include="Resources\page_white_csharp.png" />
+    <Content Include="Resources\page_white_database.png" />
+    <Content Include="Resources\page_white_error.png" />
+    <Content Include="Resources\page_white_excel.png" />
+    <Content Include="Resources\page_white_flash.png" />
+    <Content Include="Resources\page_white_h.png" />
+    <Content Include="Resources\page_white_php.png" />
+    <Content Include="Resources\page_white_powerpoint.png" />
+    <Content Include="Resources\page_white_text.png" />
+    <Content Include="Resources\page_white_visualstudio.png" />
+    <Content Include="Resources\page_white_word.png" />
+    <Content Include="Resources\page_white_zip.png" />
+    <Content Include="Resources\picture.png" />
+    <Content Include="Resources\script.png" />
+    <Content Include="Resources\television.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fluid\Fluid.csproj">
+      <Project>{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}</Project>
+      <Name>Fluid</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

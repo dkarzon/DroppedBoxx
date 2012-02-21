@@ -1,0 +1,190 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0D0BD1A-5EF2-44B7-9489-3CD7C6ABCB98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fluid</RootNamespace>
+    <AssemblyName>Fluid</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <DeployDirSuffix>Fluditity</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Animation.Statics.cs" />
+    <Compile Include="Controls\ButtonGroup.cs" />
+    <Compile Include="Classes\Brushes.cs" />
+    <Compile Include="Classes\ButtonCollection.cs" />
+    <Compile Include="Classes\ListBoxAnimation.cs" />
+    <Compile Include="Classes\Pens.cs" />
+    <Compile Include="Classes\TabCollection.cs" />
+    <Compile Include="Classes\DoubleBuffer.cs" />
+    <Compile Include="Classes\TemplateCollection.cs" />
+    <Compile Include="Controls\Line.cs" />
+    <Compile Include="Controls\enums\ShowTransition.cs" />
+    <Compile Include="Controls\enums\Transition.cs" />
+    <Compile Include="Controls\Events\ChangedEventArgs.cs" />
+    <Compile Include="Classes\ColorGroupHeader.cs" />
+    <Compile Include="Controls\enums\ButtonShape.cs" />
+    <Compile Include="Controls\ControlContainer.cs" />
+    <Compile Include="Classes\FluidControlCollection.cs" />
+    <Compile Include="Classes\Animation.cs" />
+    <Compile Include="Classes\GroupHeader.cs" />
+    <Compile Include="Classes\Layouter.cs" />
+    <Compile Include="Controls\enums\Gesture.cs" />
+    <Compile Include="Controls\enums\RoundedCorners.cs" />
+    <Compile Include="Controls\Events\ButtonGroupEvent.cs" />
+    <Compile Include="Controls\Events\CommandEventArgs.cs" />
+    <Compile Include="Controls\Events\DialogResultEventArgs.cs" />
+    <Compile Include="Controls\Events\FluidPaintEventArgs.cs" />
+    <Compile Include="Controls\Events\GestureEventArgs.cs" />
+    <Compile Include="Controls\Events\HandledEventArgs.cs" />
+    <Compile Include="Controls\Events\LayoutEventArgs.cs" />
+    <Compile Include="Controls\Events\NumericPanelEventArgs.cs" />
+    <Compile Include="Controls\Events\PointEventArgs.cs" />
+    <Compile Include="Controls\Events\ListBoxItemEventArgs.cs" />
+    <Compile Include="Controls\Events\ListBoxItemPaintEventArgs.cs" />
+    <Compile Include="Controls\Events\TemplateEventArgs.cs" />
+    <Compile Include="Controls\ListBox.Binding.cs" />
+    <Compile Include="Controls\Header.cs" />
+    <Compile Include="Controls\Host.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Events\ControlEventArgs.cs" />
+    <Compile Include="Controls\Interfaces\IColorGroupHeader.cs" />
+    <Compile Include="Controls\Interfaces\ICommandContainer.cs" />
+    <Compile Include="Controls\Interfaces\IControlContainer.cs" />
+    <Compile Include="Controls\Interfaces\IItemHeight.cs" />
+    <Compile Include="Controls\Interfaces\IMultiControlContainer.cs" />
+    <Compile Include="Controls\Interfaces\IGroupHeader.cs" />
+    <Compile Include="Controls\Interfaces\IHost.cs" />
+    <Compile Include="Controls\Interfaces\ILayoutPanel.cs" />
+    <Compile Include="Controls\Interfaces\INotifyControlAdded.cs" />
+    <Compile Include="Controls\Interfaces\IScrollContainer.cs" />
+    <Compile Include="Controls\Interfaces\IFluidPanel.cs" />
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\Interfaces\ITemplateHost.cs" />
+    <Compile Include="Controls\ListBox.ItemAnimation.cs" />
+    <Compile Include="Controls\MessageDialog.cs" />
+    <Compile Include="Controls\ModalBackground.cs" />
+    <Compile Include="Controls\TransitionPanel.cs" />
+    <Compile Include="Controls\NumericPad.cs" />
+    <Compile Include="Controls\Panel.cs" />
+    <Compile Include="Controls\ScrollContainer.cs">
+    </Compile>
+    <Compile Include="Controls\Control.cs" />
+    <Compile Include="Controls\Label.cs" />
+    <Compile Include="Controls\ListBox.cs">
+    </Compile>
+    <Compile Include="Controls\ScrollPanel.cs">
+    </Compile>
+    <Compile Include="Controls\PageControl.cs" />
+    <Compile Include="Controls\Template.cs" />
+    <Compile Include="Controls\FlatButton.cs" />
+    <Compile Include="GdiPlus\ColorConverter.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Text.cs" />
+    <Compile Include="GdiPlus\GdiEx.cs" />
+    <Compile Include="GdiPlus\BitmapPlus.cs" />
+    <Compile Include="GdiPlus\BrushPlus.cs" />
+    <Compile Include="GdiPlus\CustomLineCap.cs" />
+    <Compile Include="GdiPlus\DataTypes.cs" />
+    <Compile Include="GdiPlus\Enums.cs" />
+    <Compile Include="GdiPlus\FileStream.cs" />
+    <Compile Include="GdiPlus\FILETIME.cs" />
+    <Compile Include="GdiPlus\GraphicsPath.cs" />
+    <Compile Include="GdiPlus\GraphicsPlus.cs" />
+    <Compile Include="GdiPlus\Image.cs" />
+    <Compile Include="GdiPlus\ImageAttributesPlus.cs" />
+    <Compile Include="GdiPlus\IStream.cs" />
+    <Compile Include="GdiPlus\PenPlus.cs" />
+    <Compile Include="GdiPlus\PointF.cs" />
+    <Compile Include="GdiPlus\Shapes.cs" />
+    <Compile Include="GdiPlus\STATSTG.cs" />
+    <Compile Include="GdiPlus\Stubs.cs" />
+    <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Native\NativeMethods.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Bitmaps.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Brushes.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Drawing.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Fonts.cs" />
+    <Compile Include="GdiPlus\NativeMethods\GdiExt.cs" />
+    <Compile Include="GdiPlus\NativeMethods\GdiPlusInitializer.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Graphics.cs" />
+    <Compile Include="GdiPlus\NativeMethods\HandleRef.cs" />
+    <Compile Include="GdiPlus\NativeMethods\ImageAttributes.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Images.cs" />
+    <Compile Include="GdiPlus\NativeMethods\LineCaps.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Paths.cs" />
+    <Compile Include="GdiPlus\NativeMethods\Pens.cs" />
+    <Compile Include="GdiPlus\NativeMethods\StatusException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\NavigationPanel.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
